@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Menú principal "Sale Orders" -->
+        <menuitem id="menu_sale_orders" name="Sale Orders" sequence="10"/>
+
+        <!-- Submenús -->
+        <menuitem id="menu_create_sale_order" name="Create Sale Order" parent="menu_sale_orders" action="action_create_sale_order" sequence="10"/>
+        <menuitem id="menu_view_sale_orders" name="View Sale Orders" parent="menu_sale_orders" action="action_view_sale_orders" sequence="20"/>
+        <menuitem id="menu_reports" name="Reports" parent="menu_sale_orders" sequence="30"/>
+        <menuitem id="menu_sales_report" name="Sales Report" parent="menu_reports" action="action_sales_report" sequence="10"/>
+        <menuitem id="menu_sales_by_product" name="Sales by Product" parent="menu_reports" action="action_sales_by_product" sequence="20"/>
+
+    </data>
+</odoo>

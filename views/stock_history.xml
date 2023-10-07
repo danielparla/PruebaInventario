@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de lista -->
+        <record id="view_stock_history_tree" model="ir.ui.view">
+            <field name="name">stock_history.stock_history.tree</field>
+            <field name="model">stock_history.stock_history</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario -->
+        <record id="view_stock_history_form" model="ir.ui.view">
+            <field name="name">stock_history.stock_history.form</field>
+            <field name="model">stock_history.stock_history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de lista -->
+        <record id="action_stock_history" model="ir.actions.act_window">
+            <field name="name">Stock History</field>
+            <field name="res_model">stock_history.stock_history</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

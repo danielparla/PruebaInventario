@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de lista -->
+        <record id="view_product_product_tree" model="ir.ui.view">
+            <field name="name">product_product.product_product.tree</field>
+            <field name="model">product_product.product_product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="default_code" string="Default Code"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario -->
+        <record id="view_product_product_form" model="ir.ui.view">
+            <field name="name">product_product.product_product.form</field>
+            <field name="model">product_product.product_product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="default_code" string="Default Code"/>
+                            <field name="daily_sales_average" string="Daily Sales Average"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de lista -->
+        <record id="action_product_product" model="ir.actions.act_window">
+            <field name="name">Product Products</field>
+            <field name="res_model">product_product.product_product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
